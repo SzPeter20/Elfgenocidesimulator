@@ -1,0 +1,10 @@
+D:\git\christmas\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe.config
+D:\git\christmas\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe
+D:\git\christmas\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.pdb
+D:\git\christmas\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.AssemblyReference.cache
+D:\git\christmas\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Form1.resources
+D:\git\christmas\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Properties.Resources.resources
+D:\git\christmas\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.GenerateResource.cache
+D:\git\christmas\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.CoreCompileInputs.cache
+D:\git\christmas\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
+D:\git\christmas\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb
