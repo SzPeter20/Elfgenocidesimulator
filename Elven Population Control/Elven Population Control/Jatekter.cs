@@ -24,5 +24,26 @@ namespace Elven_Population_Control
         {
 
         }
+
+        private void Jatekter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void Jatekter_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode==Keys.Space)
+            {
+                timer1.Start();
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                tank_pictureBox.Left -= playerSpeed;
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                tank_pictureBox.Left += playerSpeed;
+            }
+        }
     }
 }
