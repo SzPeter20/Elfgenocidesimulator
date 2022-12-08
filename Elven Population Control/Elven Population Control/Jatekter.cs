@@ -54,7 +54,7 @@ namespace Elven_Population_Control
             for (int i = 0; i < elfek.Length; i++)
             {
                 
-                elfek[i].Size = new Size(60, 50);
+                elfek[i].Size = new Size(50, 50);
                 elfek[i].Image = Properties.Resources.MicrosoftTeams_image__1__removebg_preview;
                 elfek[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 this.Controls.Add(elfek[i]);
