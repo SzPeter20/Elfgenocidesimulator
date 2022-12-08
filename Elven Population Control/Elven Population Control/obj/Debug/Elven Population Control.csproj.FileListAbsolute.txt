@@ -19,3 +19,15 @@ D:\git zi\Elfgenocidesimulator\Elven Population Control\Elven Population Control
 D:\git zi\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.CoreCompileInputs.cache
 D:\git zi\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
 D:\git zi\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe.config
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.pdb
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csprojAssemblyReference.cache
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Form1.resources
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Jatekter.resources
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Properties.Resources.resources
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.GenerateResource.cache
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.CoreCompileInputs.cache
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb
+D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Szint.resources

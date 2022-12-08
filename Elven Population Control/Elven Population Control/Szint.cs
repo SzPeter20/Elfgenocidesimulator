@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Elven_Population_Control
 {
-    public partial class Form1 : Form
+    public partial class Szint : Form
     {
-        public Form1()
+        public Szint()
         {
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Szint uj = new Szint();
+            Jatekter uj = new Jatekter();
             this.Hide();
             uj.Show();
         }

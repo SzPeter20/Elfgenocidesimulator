@@ -73,9 +73,39 @@ namespace Elven_Population_Control.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hill_gd22a600b0_1280 {
+            get {
+                object obj = ResourceManager.GetObject("hill-gd22a600b0_1280", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap MicrosoftTeams_image__1__removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("MicrosoftTeams-image__1_-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_night_sky_star_background_material_blue_night_sky_star {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-night-sky-star-background-material-blue-night-sky-star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap png_clipart_night_sky_star_background_material_blue_night_sky_star2 {
+            get {
+                object obj = ResourceManager.GetObject("png-clipart-night-sky-star-background-material-blue-night-sky-star2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

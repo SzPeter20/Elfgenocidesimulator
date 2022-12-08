@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Szint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Szint.Designer.cs">
+      <DependentUpon>Szint.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -76,6 +82,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Szint.resx">
+      <DependentUpon>Szint.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -94,6 +103,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\MicrosoftTeams-image__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-night-sky-star-background-material-blue-night-sky-star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hill-gd22a600b0_1280.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-night-sky-star-background-material-blue-night-sky-star2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
