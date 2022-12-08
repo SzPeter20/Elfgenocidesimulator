@@ -31,3 +31,16 @@ D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\o
 D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
 D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb
 D:\git4\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Szint.resources
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe.config
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.pdb
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.AssemblyReference.cache
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.SuggestedBindingRedirects.cache
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Form1.resources
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Jatekter.resources
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Properties.Resources.resources
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Szint.resources
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.GenerateResource.cache
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.CoreCompileInputs.cache
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
+C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb

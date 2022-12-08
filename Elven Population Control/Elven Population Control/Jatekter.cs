@@ -15,7 +15,7 @@ namespace Elven_Population_Control
         int playerSpeed = 12;
         int enemySpeed = 5;
         int score = 0;
-        PictureBox[] elfek=new PictureBox[10];
+        PictureBox[] elfek=new PictureBox[50];
         public Jatekter()
         {
             InitializeComponent();
@@ -24,9 +24,40 @@ namespace Elven_Population_Control
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            
-        }
+            foreach (Control x in this.Controls)
+            {
+                if (x is PictureBox && (string)x.Tag == "sadInvaders")
+                {
+                    x.Left += enemySpeed;
 
+                    if (x.Left > 730)
+                    {
+                        x.Top += 65;
+                        x.Left = -80;
+                    }
+
+
+                    if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
+                    {
+                        MessageBox.Show("GAME OVER");
+                    }
+
+                    foreach (Control y in this.Controls)
+                    {
+                        if (y is PictureBox && (string)y.Tag == "bullet")
+                        {
+                            if (y.Bounds.IntersectsWith(x.Bounds))
+                            {
+                                this.Controls.Remove(x);
+                                this.Controls.Remove(y);
+                                score += 1;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
         private void Jatekter_KeyPress(object sender, KeyPressEventArgs e)
         {
             
@@ -37,6 +68,7 @@ namespace Elven_Population_Control
             if (e.KeyCode==Keys.Space)
             {
                 timer1.Start();
+                pontok_lbl.Text = "Pontok: " + score;
             }
             if (e.KeyCode == Keys.Left)
             {
@@ -52,7 +84,7 @@ namespace Elven_Population_Control
 
             int x = 55;
             int y = 25;
-            
+            int left = 0;
             for (int i = 0; i < elfek.Length; i++)
             {
 
@@ -60,10 +92,14 @@ namespace Elven_Population_Control
                 elfek[i].Size = new Size(60, 50);
                 elfek[i].Image = Properties.Resources.MicrosoftTeams_image__1__removebg_preview;
                 elfek[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                elfek[i].Top = 5; 
+                elfek[i].Left = left;
+                elfek[i].Tag = "sadInvaders";
                 this.Controls.Add(elfek[i]);
-                elfek[i].Location = new Point();
+                
                 elfek[i].BackColor = Color.Transparent;
-               
+                left = left - 80;
+
             }
 
 

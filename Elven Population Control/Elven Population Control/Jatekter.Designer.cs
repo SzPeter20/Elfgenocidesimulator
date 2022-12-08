@@ -31,7 +31,7 @@ namespace Elven_Population_Control
         {
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.pontok_lbl = new System.Windows.Forms.Label();
             this.tank_pictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tank_pictureBox)).BeginInit();
             this.SuspendLayout();
@@ -40,15 +40,15 @@ namespace Elven_Population_Control
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // label1
+            // pontok_lbl
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(12, 383);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Pontok: ";
+            this.pontok_lbl.AutoSize = true;
+            this.pontok_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.pontok_lbl.Location = new System.Drawing.Point(12, 383);
+            this.pontok_lbl.Name = "pontok_lbl";
+            this.pontok_lbl.Size = new System.Drawing.Size(47, 13);
+            this.pontok_lbl.TabIndex = 0;
+            this.pontok_lbl.Text = "Pontok: ";
             // 
             // tank_pictureBox
             // 
@@ -69,7 +69,7 @@ namespace Elven_Population_Control
             this.BackgroundImage = global::Elven_Population_Control.Properties.Resources.png_clipart_night_sky_star_background_material_blue_night_sky_star2;
             this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.tank_pictureBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.pontok_lbl);
             this.Name = "Jatekter";
             this.Text = "Jatekter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jatekter_FormClosing);
@@ -84,7 +84,7 @@ namespace Elven_Population_Control
         #endregion
 
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label pontok_lbl;
         private System.Windows.Forms.PictureBox tank_pictureBox;
     }
 }
