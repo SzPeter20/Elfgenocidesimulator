@@ -55,6 +55,10 @@ namespace Elven_Population_Control
                             }
                         }
                     }
+                    if (score > 8)
+                    {
+                        enemySpeed = 12;
+                    }
                 }
             }
         }
@@ -69,6 +73,7 @@ namespace Elven_Population_Control
             {
                 timer1.Start();
                 pontok_lbl.Text = "Pontok: " + score;
+                golo();
             }
             if (e.KeyCode == Keys.Left)
             {
@@ -79,11 +84,18 @@ namespace Elven_Population_Control
                 tank_pictureBox.Location = new Point(tank_pictureBox.Location.X + 10, tank_pictureBox.Location.Y);
             }
         }
+
+        private void golo()
+        {
+            PictureBox bullet = new PictureBox();
+            bullet.Image = Properties.Resources.bullet_png_clipart_11;
+
+        }
+
         private void makeInvaders()
         {
 
-            int x = 55;
-            int y = 25;
+           
             int left = 0;
             for (int i = 0; i < elfek.Length; i++)
             {
