@@ -39,11 +39,11 @@ namespace Elven_Population_Control
             }
             if (e.KeyCode == Keys.Left)
             {
-                tank_pictureBox.Left -= playerSpeed;
+                tank_pictureBox.Location =new Point(tank_pictureBox.Location.X-10,tank_pictureBox.Location.Y);
             }
             if (e.KeyCode == Keys.Right)
             {
-                
+                tank_pictureBox.Location = new Point(tank_pictureBox.Location.X + 10, tank_pictureBox.Location.Y);
             }
         }
         private void makeInvaders()
