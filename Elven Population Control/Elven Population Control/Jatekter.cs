@@ -15,6 +15,7 @@ namespace Elven_Population_Control
         int playerSpeed = 12;
         int enemySpeed = 5;
         int score = 0;
+        PictureBox[] elfek=new PictureBox[50];
         public Jatekter()
         {
             InitializeComponent();
@@ -22,7 +23,7 @@ namespace Elven_Population_Control
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            makeInvaders();
         }
 
         private void Jatekter_KeyPress(object sender, KeyPressEventArgs e)
@@ -42,8 +43,26 @@ namespace Elven_Population_Control
             }
             if (e.KeyCode == Keys.Right)
             {
-                tank_pictureBox.Left += playerSpeed;
+                
             }
+        }
+        private void makeInvaders()
+        {
+
+            
+
+            for (int i = 0; i < elfek.Length; i++)
+            {
+                
+                elfek[i].Size = new Size(60, 50);
+                elfek[i].Image = Properties.Resources.MicrosoftTeams_image__1__removebg_preview;
+                elfek[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                this.Controls.Add(elfek[i]);
+                
+
+            }
+
+
         }
     }
 }
