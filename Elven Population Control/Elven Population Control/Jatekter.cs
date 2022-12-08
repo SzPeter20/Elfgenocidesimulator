@@ -13,7 +13,7 @@ namespace Elven_Population_Control
     public partial class Jatekter : Form
     {
         int playerSpeed = 12;
-        int enemySpeed = 5;
+        int enemySpeed =15;
         int score = 0;
         PictureBox[] elfek=new PictureBox[50];
         public Jatekter()
