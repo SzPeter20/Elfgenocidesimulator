@@ -40,7 +40,7 @@ namespace Elven_Population_Control
             // 
             this.richTextBox1.Location = new System.Drawing.Point(12, 40);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(284, 426);
+            this.richTextBox1.Size = new System.Drawing.Size(284, 427);
             this.richTextBox1.TabIndex = 1;
             this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             // 
@@ -59,7 +59,7 @@ namespace Elven_Population_Control
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(302, 40);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(547, 410);
+            this.pictureBox2.Size = new System.Drawing.Size(547, 427);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -68,7 +68,7 @@ namespace Elven_Population_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 478);
+            this.ClientSize = new System.Drawing.Size(862, 477);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);

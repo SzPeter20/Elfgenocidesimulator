@@ -66,7 +66,7 @@ namespace Elven_Population_Control
             this.tank_pictureBox.Location = new System.Drawing.Point(345, 359);
             this.tank_pictureBox.Name = "tank_pictureBox";
             this.tank_pictureBox.Size = new System.Drawing.Size(105, 79);
-            this.tank_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.tank_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tank_pictureBox.TabIndex = 1;
             this.tank_pictureBox.TabStop = false;
             // 

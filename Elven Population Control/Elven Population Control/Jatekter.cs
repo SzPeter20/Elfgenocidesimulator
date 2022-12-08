@@ -49,8 +49,6 @@ namespace Elven_Population_Control
         private void makeInvaders()
         {
 
-            
-
             for (int i = 0; i < elfek.Length; i++)
             {
                 
