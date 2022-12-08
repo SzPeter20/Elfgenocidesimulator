@@ -113,5 +113,8 @@
   <ItemGroup>
     <None Include="Resources\png-clipart-night-sky-star-background-material-blue-night-sky-star2.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet-png-clipart-11.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
