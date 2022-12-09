@@ -117,38 +117,32 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="png-clipart-night-sky-star-background-material-blue-night-sky-star" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-night-sky-star-background-material-blue-night-sky-star.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="png-clipart-night-sky-star-background-material-blue-night-sky-star2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\png-clipart-night-sky-star-background-material-blue-night-sky-star2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="MicrosoftTeams-image__1_-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\MicrosoftTeams-image__1_-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hill-gd22a600b0_1280" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hill-gd22a600b0_1280.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bullet-png-clipart-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bullet-png-clipart-11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="tank" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tank.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="09eed588a581ba5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\09eed588a581ba5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="golyo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\golyo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="elf" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\elf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\forest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <metadata name="timer_life.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA
+        AAD9/f3//////9bW1v9WVlb/XV1d/2ZmZv94eHj/cnJy/21tbf9vb2//bW1t/21tbf9hYWH/19fX////
+        ///9/f3//f39///////U1NT/TU1N/1ZWVv9hYWH/XFxc/2BgYP+CgoL/ZGRk/2NjY/9jY2P/YWFh/9jY
+        2P///////f39//39/f//////0NDQ/0BAQP9NTU3/UVFR/1ZWVv9sbGz/W1tb/1paWv9gYGD/YGBg/11d
+        Xf/Y2Nj///////39/f/8/Pz//////8vLy/8mJib/Pz8//1RUVP9nZ2f/goKC/2VlZf9JSUn/WVlZ/2Rk
+        ZP9YWFj/1tbW///////9/f3//f39///////d3d3/ZmZm/1dXV/9jY2P/ZGRk/2hoaP9PT0//QUFB/zMz
+        M/8tLS3/Ojo6/9bW1v///////f39//7+/v//////39/f/5CQkP+RkZH/YWFh/4iIiP+5ubn/o6Oj/3h4
+        eP8lJSX/GBgY/xAQEP/ExMT///////z8/P/9/f3//////93d3f9+fn7/goKC/5CQkP/Pz8//1NTU/7W1
+        tf+FhYX/LCws/xcXF/8WFhb/xsbG///////8/Pz//f39///////c3Nz/d3d3/3h4eP+1tbX/zc3N/8HB
+        wf+4uLj/oaGh/0BAQP8YGBj/FhYW/8bGxv///////Pz8//39/f//////3Nzc/2pqav+Wlpb/wcHB/9zc
+        3P/Z2dn/kJCQ/4yMjP9sbGz/FRUV/w4ODv/Gxsb///////z8/P/9/f3//////9jY2P9ycnL/wsLC/8nJ
+        yf/T09P/1tbW/5eXl/+dnZ3/nJyc/yoqKv8ODg7/x8fH///////8/Pz//f39///////V1dX/eHh4/5WV
+        lf+3t7f/mJiY/6Ojo/+hoaH/gYGB/3d3d/8vLy//EhIS/8bGxv///////Pz8//39/f//////2NjY/19f
+        X/9KSkr/pqam/9DQ0P/FxcX/x8fH/6CgoP9ZWVn/Ghoa/w0NDf/FxcX///////z8/P/9/f3//////9fX
+        1/9iYmL/NDQ0/5iYmP/f39//09PT/8fHx/+rq6v/RUVF/xMTE/8PDw//xcXF///////8/Pz//f39////
+        ///X19f/Z2dn/zQ0NP9hYWH/srKy/7Kysv+oqKj/e3t7/yYmJv8YGBj/ExMT/8bGxv///////Pz8//39
+        /f//////19fX/2FhYf9gYGD/Jycn/zAwMP8vLy//KCgo/x8fH/8SEhL/Gxsb/xISEv/ExMT///////z8
+        /P/9/f3//////9fX1/9eXl7/aGho/2BgYP83Nzf/GRkZ/y4uLv9SUlL/GRkZ/x0dHf8ODg7/xMTE////
+        ///8/Pz/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAA==
+</value>
   </data>
 </root>

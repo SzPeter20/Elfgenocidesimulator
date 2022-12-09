@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SimoSim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimoSim.Designer.cs">
+      <DependentUpon>SimoSim.cs</DependentUpon>
+    </Compile>
     <Compile Include="Szint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +88,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SimoSim.resx">
+      <DependentUpon>SimoSim.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Szint.resx">
       <DependentUpon>Szint.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forest.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

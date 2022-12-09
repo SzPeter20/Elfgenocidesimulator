@@ -20,10 +20,21 @@ namespace Elven_Population_Control
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            Jatekter uj = new Jatekter();
-            uj.nehez(diff);
-            this.Hide();
-            uj.Show();
+            if (diff==2)
+            {
+                Jatekter uj = new Jatekter();
+                uj.nehez(diff);
+                this.Hide();
+                uj.Show();
+            }
+            else
+            {
+                SimoSim uj = new SimoSim();
+                uj.nehez(diff);
+                this.Hide();
+                uj.Show();
+            }
+            
         }
 
         private void Szint_FormClosing(object sender, FormClosingEventArgs e)
