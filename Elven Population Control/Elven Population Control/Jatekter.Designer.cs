@@ -71,6 +71,7 @@ namespace Elven_Population_Control
             this.Controls.Add(this.tank_pictureBox);
             this.Controls.Add(this.pontok_lbl);
             this.Name = "Jatekter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jatekter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jatekter_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Jatekter_KeyDown);

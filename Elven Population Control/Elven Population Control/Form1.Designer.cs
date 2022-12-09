@@ -29,54 +29,67 @@ namespace Elven_Population_Control
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.rchtxtbx_lore = new System.Windows.Forms.RichTextBox();
+            this.lbl_title = new System.Windows.Forms.Label();
+            this.pctbx_start = new System.Windows.Forms.PictureBox();
+            this.timer_crawl = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pctbx_start)).BeginInit();
             this.SuspendLayout();
             // 
-            // richTextBox1
+            // rchtxtbx_lore
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 40);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(284, 427);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
+            this.rchtxtbx_lore.Location = new System.Drawing.Point(115, 490);
+            this.rchtxtbx_lore.Name = "rchtxtbx_lore";
+            this.rchtxtbx_lore.Size = new System.Drawing.Size(284, 427);
+            this.rchtxtbx_lore.TabIndex = 1;
+            this.rchtxtbx_lore.Text = resources.GetString("rchtxtbx_lore.Text");
             // 
-            // label1
+            // lbl_title
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(238, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(611, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "The Second Elven Civil War Has Begun! Gentleelves it\'s cleansing time!";
+            this.lbl_title.AutoSize = true;
+            this.lbl_title.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lbl_title.Location = new System.Drawing.Point(67, 9);
+            this.lbl_title.Name = "lbl_title";
+            this.lbl_title.Size = new System.Drawing.Size(611, 24);
+            this.lbl_title.TabIndex = 2;
+            this.lbl_title.Text = "The Second Elven Civil War Has Begun! Gentleelves it\'s cleansing time!";
+            this.lbl_title.Visible = false;
             // 
-            // pictureBox2
+            // pctbx_start
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(302, 40);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(547, 427);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pctbx_start.Image = ((System.Drawing.Image)(resources.GetObject("pctbx_start.Image")));
+            this.pctbx_start.Location = new System.Drawing.Point(303, 35);
+            this.pctbx_start.Name = "pctbx_start";
+            this.pctbx_start.Size = new System.Drawing.Size(547, 427);
+            this.pctbx_start.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pctbx_start.TabIndex = 4;
+            this.pctbx_start.TabStop = false;
+            this.pctbx_start.Visible = false;
+            this.pctbx_start.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // timer_crawl
+            // 
+            this.timer_crawl.Interval = 70;
+            this.timer_crawl.Tick += new System.EventHandler(this.timer_crawl_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 477);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(464, 477);
+            this.Controls.Add(this.pctbx_start);
+            this.Controls.Add(this.lbl_title);
+            this.Controls.Add(this.rchtxtbx_lore);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximumSize = new System.Drawing.Size(480, 516);
+            this.MinimumSize = new System.Drawing.Size(480, 516);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deepest Lore";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            ((System.ComponentModel.ISupportInitialize)(this.pctbx_start)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -84,9 +97,10 @@ namespace Elven_Population_Control
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.RichTextBox rchtxtbx_lore;
+        private System.Windows.Forms.Label lbl_title;
+        private System.Windows.Forms.PictureBox pctbx_start;
+        private System.Windows.Forms.Timer timer_crawl;
     }
 }
 

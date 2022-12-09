@@ -15,6 +15,7 @@ namespace Elven_Population_Control
         int playerSpeed = 12;
         int enemySpeed = 5;
         int score = 0;
+        int nehezseg = 0;
         PictureBox[] elfek=new PictureBox[50];
         public Jatekter()
         {
@@ -24,43 +25,7 @@ namespace Elven_Population_Control
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            foreach (Control x in this.Controls)
-            {
-                if (x is PictureBox && (string)x.Tag == "sadInvaders")
-                {
-                    x.Left += enemySpeed;
-
-                    if (x.Left > 730)
-                    {
-                        x.Top += 65;
-                        x.Left = -80;
-                    }
-
-
-                    if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
-                    {
-                        MessageBox.Show("GAME OVER");
-                    }
-
-                    foreach (Control y in this.Controls)
-                    {
-                        if (y is PictureBox && (string)y.Tag == "bullet")
-                        {
-                            if (y.Bounds.IntersectsWith(x.Bounds))
-                            {
-                                this.Controls.Remove(x);
-                                this.Controls.Remove(y);
-                                score += 1;
-
-                            }
-                        }
-                    }
-                    if (score > 8)
-                    {
-                        enemySpeed = 12;
-                    }
-                }
-            }
+            
         }
         private void Jatekter_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -115,6 +80,11 @@ namespace Elven_Population_Control
             }
 
 
+        }
+
+        public void nehez(int diff)
+        {
+            nehezseg = diff;
         }
 
         private void Jatekter_FormClosing(object sender, FormClosingEventArgs e)
