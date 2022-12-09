@@ -38,7 +38,7 @@ namespace Elven_Population_Control
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 40);
+            this.richTextBox1.Location = new System.Drawing.Point(12, 36);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(284, 427);
             this.richTextBox1.TabIndex = 1;
