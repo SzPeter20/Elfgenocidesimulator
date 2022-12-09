@@ -53,7 +53,7 @@ namespace Elven_Population_Control
         private void golo()
         {
             PictureBox bullet = new PictureBox();
-            bullet.Image = Properties.Resources.bullet_png_clipart_11;
+            bullet.Image = Properties.Resources.golyo;
 
         }
 
@@ -67,7 +67,7 @@ namespace Elven_Population_Control
 
                 elfek[i] = new PictureBox();
                 elfek[i].Size = new Size(60, 50);
-                elfek[i].Image = Properties.Resources.MicrosoftTeams_image__1__removebg_preview;
+                elfek[i].Image = Properties.Resources.elf;
                 elfek[i].SizeMode = PictureBoxSizeMode.StretchImage;
                 elfek[i].Top = 5; 
                 elfek[i].Left = left;
