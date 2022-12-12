@@ -32,14 +32,27 @@ namespace Elven_Population_Control
 
                     if (x.Left > 730)
                     {
-                        x.Top += 65;
+                        x.Top += 75;
                         x.Left = -80;
                     }
+                }
+
+                if (x is PictureBox && (string)x.Tag == "bullet")
+                {
+                    x.Top -= 20;
+
+                    if (x.Top < 15)
+                    {
+                        this.Controls.Remove(x);
+                       
+                    }
+                
 
 
-                    if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
+                if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
                     {
                         MessageBox.Show("GAME OVER");
+                        
                     }
 
                     foreach (Control y in this.Controls)
@@ -61,6 +74,7 @@ namespace Elven_Population_Control
                     }
                 }
             }
+           
         }
         private void Jatekter_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -69,11 +83,15 @@ namespace Elven_Population_Control
 
         private void Jatekter_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Space)
+            if (e.KeyCode==Keys.Enter)
             {
                 timer1.Start();
                 pontok_lbl.Text = "Pontok: " + score;
-                golo();
+                
+            }
+            if (e.KeyCode==Keys.Space) 
+            {
+                golo("bullet");
             }
             if (e.KeyCode == Keys.Left)
             {
@@ -85,12 +103,25 @@ namespace Elven_Population_Control
             }
         }
 
-        private void golo()
+        private void golo(string bulletTag)
         {
             PictureBox bullet = new PictureBox();
             bullet.Image = Properties.Resources.bullet_png_clipart_11;
+            bullet.Size = new Size(5, 20);
+            bullet.Tag = bulletTag;
+            bullet.Left = tank_pictureBox.Left + tank_pictureBox.Width / 2;
 
-        }
+            if ((string)bullet.Tag == "bullet")
+            {
+                bullet.Top = tank_pictureBox.Top - 20;
+            }
+            
+
+            this.Controls.Add(bullet);
+            bullet.BringToFront();
+
+        
+    }
 
         private void makeInvaders()
         {

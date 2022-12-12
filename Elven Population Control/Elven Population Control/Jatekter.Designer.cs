@@ -65,8 +65,7 @@ namespace Elven_Population_Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.BackgroundImage = global::Elven_Population_Control.Properties.Resources.png_clipart_night_sky_star_background_material_blue_night_sky_star2;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(800, 415);
             this.Controls.Add(this.tank_pictureBox);
             this.Controls.Add(this.pontok_lbl);

@@ -44,3 +44,4 @@ C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Con
 C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.CoreCompileInputs.cache
 C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
 C:\Users\Zámbó Illés\Documents\Prog\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb
+D:\git zi\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Szint.resources
