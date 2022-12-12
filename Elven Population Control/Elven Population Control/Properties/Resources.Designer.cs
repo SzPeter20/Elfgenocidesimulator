@@ -83,6 +83,16 @@ namespace Elven_Population_Control.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bloodymess {
+            get {
+                object obj = ResourceManager.GetObject("bloodymess", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bullet_png_clipart_11 {
             get {
                 object obj = ResourceManager.GetObject("bullet-png-clipart-11", resourceCulture);
@@ -156,6 +166,16 @@ namespace Elven_Population_Control.Properties {
         internal static System.Drawing.Bitmap png_clipart_night_sky_star_background_material_blue_night_sky_star2 {
             get {
                 object obj = ResourceManager.GetObject("png-clipart-night-sky-star-background-material-blue-night-sky-star2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soldier {
+            get {
+                object obj = ResourceManager.GetObject("soldier", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

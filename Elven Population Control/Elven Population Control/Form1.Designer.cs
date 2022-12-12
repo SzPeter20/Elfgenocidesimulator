@@ -33,8 +33,8 @@ namespace Elven_Population_Control
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.rchtxtbx_lore = new System.Windows.Forms.RichTextBox();
             this.lbl_title = new System.Windows.Forms.Label();
-            this.pctbx_start = new System.Windows.Forms.PictureBox();
             this.timer_crawl = new System.Windows.Forms.Timer(this.components);
+            this.pctbx_start = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pctbx_start)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,11 @@ namespace Elven_Population_Control
             this.lbl_title.Text = "The Second Elven Civil War Has Begun! Gentleelves it\'s cleansing time!";
             this.lbl_title.Visible = false;
             // 
+            // timer_crawl
+            // 
+            this.timer_crawl.Interval = 70;
+            this.timer_crawl.Tick += new System.EventHandler(this.timer_crawl_Tick);
+            // 
             // pctbx_start
             // 
             this.pctbx_start.Image = ((System.Drawing.Image)(resources.GetObject("pctbx_start.Image")));
@@ -68,11 +73,6 @@ namespace Elven_Population_Control
             this.pctbx_start.TabStop = false;
             this.pctbx_start.Visible = false;
             this.pctbx_start.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // timer_crawl
-            // 
-            this.timer_crawl.Interval = 70;
-            this.timer_crawl.Tick += new System.EventHandler(this.timer_crawl_Tick);
             // 
             // Form1
             // 
@@ -89,6 +89,7 @@ namespace Elven_Population_Control
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deepest Lore";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.pctbx_start)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

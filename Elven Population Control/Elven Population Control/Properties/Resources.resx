@@ -148,7 +148,13 @@
   <data name="elf" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\elf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="soldier" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\imgs\soldier.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="forest" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\forest.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="bloodymess" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bloodymess.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

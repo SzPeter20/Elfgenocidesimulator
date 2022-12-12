@@ -15,6 +15,7 @@ namespace Elven_Population_Control
         public Form1()
         {
             InitializeComponent();
+            rchtxtbx_lore.Enabled = false;
             timer_crawl.Start();
         }
 
@@ -32,6 +33,7 @@ namespace Elven_Population_Control
 
         private void timer_crawl_Tick(object sender, EventArgs e)
         {
+            
             if (rchtxtbx_lore.Location.Y!=36)
             {
                 rchtxtbx_lore.Location = new Point(rchtxtbx_lore.Location.X, rchtxtbx_lore.Location.Y - 2);
@@ -65,6 +67,17 @@ namespace Elven_Population_Control
 
             
             
+        }
+
+        private void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            timer_crawl.Stop();
+            this.MinimumSize = new Size(878, 507);
+            pctbx_start.Visible = true;
+            lbl_title.Visible = true;
+            rchtxtbx_lore.Location = new Point(10, 36);
+
+
         }
     }
 }

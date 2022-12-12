@@ -37,17 +37,17 @@ namespace Elven_Population_Control
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // rdbtn_tchórzliwa_cipka
             // 
             this.rdbtn_tchórzliwa_cipka.AutoSize = true;
             this.rdbtn_tchórzliwa_cipka.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rdbtn_tchórzliwa_cipka.Location = new System.Drawing.Point(62, 263);
+            this.rdbtn_tchórzliwa_cipka.Location = new System.Drawing.Point(79, 230);
             this.rdbtn_tchórzliwa_cipka.Name = "rdbtn_tchórzliwa_cipka";
             this.rdbtn_tchórzliwa_cipka.Size = new System.Drawing.Size(14, 13);
             this.rdbtn_tchórzliwa_cipka.TabIndex = 0;
@@ -59,7 +59,7 @@ namespace Elven_Population_Control
             // 
             this.rdbtn_med.AutoSize = true;
             this.rdbtn_med.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rdbtn_med.Location = new System.Drawing.Point(266, 155);
+            this.rdbtn_med.Location = new System.Drawing.Point(254, 200);
             this.rdbtn_med.Name = "rdbtn_med";
             this.rdbtn_med.Size = new System.Drawing.Size(14, 13);
             this.rdbtn_med.TabIndex = 1;
@@ -71,7 +71,7 @@ namespace Elven_Population_Control
             // 
             this.rdbtn_hell.AutoSize = true;
             this.rdbtn_hell.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rdbtn_hell.Location = new System.Drawing.Point(425, 46);
+            this.rdbtn_hell.Location = new System.Drawing.Point(424, 114);
             this.rdbtn_hell.Name = "rdbtn_hell";
             this.rdbtn_hell.Size = new System.Drawing.Size(14, 13);
             this.rdbtn_hell.TabIndex = 2;
@@ -81,7 +81,7 @@ namespace Elven_Population_Control
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(226, 417);
+            this.btn_start.Location = new System.Drawing.Point(217, 417);
             this.btn_start.Name = "btn_start";
             this.btn_start.Size = new System.Drawing.Size(93, 78);
             this.btn_start.TabIndex = 3;
@@ -94,7 +94,7 @@ namespace Elven_Population_Control
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.ForeColor = System.Drawing.Color.HotPink;
-            this.label1.Location = new System.Drawing.Point(12, 368);
+            this.label1.Location = new System.Drawing.Point(30, 319);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 4;
@@ -103,7 +103,7 @@ namespace Elven_Population_Control
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(239, 263);
+            this.label2.Location = new System.Drawing.Point(227, 308);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 5;
@@ -113,36 +113,40 @@ namespace Elven_Population_Control
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(422, 193);
+            this.label3.Location = new System.Drawing.Point(421, 220);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(28, 13);
             this.label3.TabIndex = 6;
             this.label3.Text = "Hell!";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 306);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(43, 40);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(399, 84);
+            this.pictureBox2.Location = new System.Drawing.Point(398, 133);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 84);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 8;
             this.pictureBox2.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(63, 257);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(43, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // Szint
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(517, 507);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -158,8 +162,8 @@ namespace Elven_Population_Control
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Szint";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Szint_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
