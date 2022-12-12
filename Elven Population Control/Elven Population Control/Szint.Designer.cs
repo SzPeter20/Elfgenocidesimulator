@@ -46,37 +46,39 @@ namespace Elven_Population_Control
             // rdbtn_tchórzliwa_cipka
             // 
             this.rdbtn_tchórzliwa_cipka.AutoSize = true;
+            this.rdbtn_tchórzliwa_cipka.BackColor = System.Drawing.Color.Transparent;
             this.rdbtn_tchórzliwa_cipka.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rdbtn_tchórzliwa_cipka.Location = new System.Drawing.Point(79, 230);
             this.rdbtn_tchórzliwa_cipka.Name = "rdbtn_tchórzliwa_cipka";
             this.rdbtn_tchórzliwa_cipka.Size = new System.Drawing.Size(14, 13);
             this.rdbtn_tchórzliwa_cipka.TabIndex = 0;
-            this.rdbtn_tchórzliwa_cipka.TabStop = true;
-            this.rdbtn_tchórzliwa_cipka.UseVisualStyleBackColor = true;
+            this.rdbtn_tchórzliwa_cipka.UseVisualStyleBackColor = false;
             this.rdbtn_tchórzliwa_cipka.CheckedChanged += new System.EventHandler(this.rdbtn_tchórzliwa_cipka_CheckedChanged);
             // 
             // rdbtn_med
             // 
             this.rdbtn_med.AutoSize = true;
+            this.rdbtn_med.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtn_med.Checked = true;
             this.rdbtn_med.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.rdbtn_med.Location = new System.Drawing.Point(254, 200);
+            this.rdbtn_med.Location = new System.Drawing.Point(252, 176);
             this.rdbtn_med.Name = "rdbtn_med";
             this.rdbtn_med.Size = new System.Drawing.Size(14, 13);
             this.rdbtn_med.TabIndex = 1;
             this.rdbtn_med.TabStop = true;
-            this.rdbtn_med.UseVisualStyleBackColor = true;
+            this.rdbtn_med.UseVisualStyleBackColor = false;
             this.rdbtn_med.CheckedChanged += new System.EventHandler(this.rdbtn_med_CheckedChanged);
             // 
             // rdbtn_hell
             // 
             this.rdbtn_hell.AutoSize = true;
+            this.rdbtn_hell.BackColor = System.Drawing.Color.Transparent;
             this.rdbtn_hell.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rdbtn_hell.Location = new System.Drawing.Point(424, 114);
             this.rdbtn_hell.Name = "rdbtn_hell";
             this.rdbtn_hell.Size = new System.Drawing.Size(14, 13);
             this.rdbtn_hell.TabIndex = 2;
-            this.rdbtn_hell.TabStop = true;
-            this.rdbtn_hell.UseVisualStyleBackColor = true;
+            this.rdbtn_hell.UseVisualStyleBackColor = false;
             this.rdbtn_hell.CheckedChanged += new System.EventHandler(this.rdbtn_hell_CheckedChanged);
             // 
             // btn_start
@@ -103,7 +105,7 @@ namespace Elven_Population_Control
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(227, 308);
+            this.label2.Location = new System.Drawing.Point(225, 284);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 5;
@@ -122,7 +124,7 @@ namespace Elven_Population_Control
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Image = global::Elven_Population_Control.Properties.Resources.skull;
             this.pictureBox2.Location = new System.Drawing.Point(398, 133);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(70, 84);

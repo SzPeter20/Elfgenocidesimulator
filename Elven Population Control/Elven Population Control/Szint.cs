@@ -16,6 +16,7 @@ namespace Elven_Population_Control
         public Szint()
         {
             InitializeComponent();
+            rdbtn_med.Checked = true;
         }
 
         private void btn_start_Click(object sender, EventArgs e)

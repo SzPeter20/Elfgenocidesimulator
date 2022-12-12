@@ -53,6 +53,7 @@ namespace Elven_Population_Control
             // tank_pictureBox
             // 
             this.tank_pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.tank_pictureBox.Cursor = System.Windows.Forms.Cursors.Default;
             this.tank_pictureBox.Image = global::Elven_Population_Control.Properties.Resources.tank;
             this.tank_pictureBox.Location = new System.Drawing.Point(445, 299);
             this.tank_pictureBox.Name = "tank_pictureBox";

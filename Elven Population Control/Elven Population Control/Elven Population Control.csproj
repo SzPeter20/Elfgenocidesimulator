@@ -140,5 +140,11 @@
   <ItemGroup>
     <None Include="Resources\bloodymess.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imgs\favicon_cross.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imgs\skull.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
