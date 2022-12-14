@@ -82,3 +82,4 @@ D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj
 D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.CoreCompileInputs.cache
 D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
 D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb
+D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Suomenvoitto.resources

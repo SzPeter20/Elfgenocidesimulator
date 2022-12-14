@@ -18,7 +18,10 @@ namespace Elven_Population_Control
         static List<PictureBox> enemies =new List<PictureBox>();
         static int namec = 0;
         static Random muzzleloc = new Random();
+        static Random dir = new Random();
+        static int hel = 0;
         static string[] muszka =new string[5] { "Sasha", "Vasily", "Dmitri", "Ivan", "Sergey" };
+        static string irany = "";
         public SimoSim()
         {
             InitializeComponent();
@@ -97,20 +100,36 @@ namespace Elven_Population_Control
         private void timer_life_Tick(object sender, EventArgs e)
         {
 
+
+
+
             counter++;
             if (nehezseg==3)
             {
-                if (timerend==counter)
+                if (pctbx_direction.Image==null)
                 {
-                    
+                    if (dir.Next(0,100)>50)
+                    {
+                        pctbx_direction.Image = Properties.Resources.arrow_right;
+                        irany = "right";
+                    }
+                    else
+                    {
+                        pctbx_direction.Image = Properties.Resources.arrow_left;
+                        irany = "left";
+                    }
+                }
+
+                if (counter%5==0)
+                {
+                    hel = counter;
                     pctbx_muzzle.Location = new Point(pctbx_muzzle.Location.X+muzzleloc.Next(0,130), pctbx_muzzle.Location.Y + muzzleloc.Next(0, 130));
                     pctbx_muzzle.Visible = true;
                 }
-                
-                if (counter == timerend+3)
+                if (counter==hel+2)
                 {
                     pctbx_muzzle.Visible = false;
-                    MessageBox.Show("Lelőttek a mesterlövész elfinek! Egy vagy a sok szár közül. Nem lehet újra kezdeni mert a mögötted lévőket is lelőtték.");
+                   
                 }
             }
             else
@@ -134,7 +153,8 @@ namespace Elven_Population_Control
                 if (enemies.Count==0)
                 {
                     timer_life.Stop();
-                    MessageBox.Show("Olemme tehneet isänmaan ylpeyden!");
+                    Suomenvoitto uj = new Suomenvoitto();
+                    
                 }
                 else
                 {
@@ -151,6 +171,46 @@ namespace Elven_Population_Control
         private void SimoSim_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void SimoSim_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (irany=="right"&& e.KeyChar==Convert.ToChar( Keys.Right))
+            {
+                bool sikeres = true;
+                ugras(sikeres);
+            }
+            else if (irany=="left" && e.KeyChar == Convert.ToChar(Keys.Left))
+            {
+                bool sikeres = true;
+                ugras(sikeres);
+            }
+            else if (irany == "right" && !(e.KeyChar == Convert.ToChar(Keys.Right)))
+            {
+                bool sikeres = false;
+                ugras(sikeres);
+            }
+            else if (irany == "left" && !(e.KeyChar == Convert.ToChar(Keys.Left)))
+            {
+                bool sikeres = false;
+                ugras(sikeres);
+            }
+        }
+
+        private void ugras(bool sikeres)
+        {
+            if (sikeres)
+            {
+                pctbx_direction.Image = null;
+                irany = "";
+            }
+            else
+            {
+                this.BackgroundImage = null;
+                this.BackColor = Color.Black;
+                pctbx_muzzle.Visible = false;
+                pctbx_direction.Visible = false;
+            }
         }
     }
 }
