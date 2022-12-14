@@ -66,6 +66,12 @@
     <Compile Include="SimoSim.Designer.cs">
       <DependentUpon>SimoSim.cs</DependentUpon>
     </Compile>
+    <Compile Include="Suomenvoitto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Suomenvoitto.Designer.cs">
+      <DependentUpon>Suomenvoitto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Szint.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <EmbeddedResource Include="SimoSim.resx">
       <DependentUpon>SimoSim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Suomenvoitto.resx">
+      <DependentUpon>Suomenvoitto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Szint.resx">
       <DependentUpon>Szint.cs</DependentUpon>

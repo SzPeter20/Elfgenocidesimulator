@@ -17,6 +17,7 @@ namespace Elven_Population_Control
         static int timerend;
         static List<PictureBox> enemies =new List<PictureBox>();
         static int namec = 0;
+        static Random muzzleloc = new Random();
         static string[] muszka =new string[5] { "Sasha", "Vasily", "Dmitri", "Ivan", "Sergey" };
         public SimoSim()
         {
@@ -24,6 +25,10 @@ namespace Elven_Population_Control
         }
         public void nehez(int diff)
         {
+            if (diff==3)
+            {
+                this.BackgroundImage = Properties.Resources.forest;
+            }
             nehezseg = diff;
             timerset();
         }
@@ -37,7 +42,7 @@ namespace Elven_Population_Control
             else if (nehezseg == 3)
             {
                 Random velet = new Random();
-                timerend = velet.Next(100, 690);
+                timerend = velet.Next(80, 100);
                 timer_life.Start();
 
                 /*
@@ -70,6 +75,7 @@ namespace Elven_Population_Control
             enemies.Add(enemy);
             enemy.BringToFront();
             namec++;
+            enemy.Cursor = System.Windows.Forms.Cursors.Cross;
 
         }
 
@@ -78,19 +84,32 @@ namespace Elven_Population_Control
             PictureBox kattintott = sender as PictureBox;
             kattintott.Image = Properties.Resources.bloodymess;
             kattintott.Size = new Size(50, 20);
-            kattintott.Location = new Point(kattintott.Location.X, kattintott.Location.Y + 10);
+            if (enemies.Contains(kattintott))
+            {
+                kattintott.Location = new Point(kattintott.Location.X, kattintott.Location.Y + 10);
+            }
+            
             enemies.Remove(kattintott);
+            
 
         }
 
         private void timer_life_Tick(object sender, EventArgs e)
         {
+
             counter++;
             if (nehezseg==3)
             {
-                
-                if (counter == timerend)
+                if (timerend==counter)
                 {
+                    
+                    pctbx_muzzle.Location = new Point(pctbx_muzzle.Location.X+muzzleloc.Next(0,130), pctbx_muzzle.Location.Y + muzzleloc.Next(0, 130));
+                    pctbx_muzzle.Visible = true;
+                }
+                
+                if (counter == timerend+3)
+                {
+                    pctbx_muzzle.Visible = false;
                     MessageBox.Show("Lelőttek a mesterlövész elfinek! Egy vagy a sok szár közül. Nem lehet újra kezdeni mert a mögötted lévőket is lelőtték.");
                 }
             }
