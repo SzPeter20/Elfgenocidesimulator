@@ -34,8 +34,8 @@ namespace Elven_Population_Control
             this.timer_life = new System.Windows.Forms.Timer(this.components);
             this.pctbx_muzzle = new System.Windows.Forms.PictureBox();
             this.pctbx_direction = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_ohno = new System.Windows.Forms.Label();
+            this.lbl_anyways = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pctbx_muzzle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbx_direction)).BeginInit();
             this.SuspendLayout();
@@ -67,27 +67,29 @@ namespace Elven_Population_Control
             this.pctbx_direction.TabStop = false;
             this.pctbx_direction.Visible = false;
             // 
-            // label1
+            // lbl_ohno
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Black;
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(748, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Sajnos lelőttek. Szivacs.";
+            this.lbl_ohno.AutoSize = true;
+            this.lbl_ohno.BackColor = System.Drawing.Color.Black;
+            this.lbl_ohno.ForeColor = System.Drawing.Color.White;
+            this.lbl_ohno.Location = new System.Drawing.Point(748, 60);
+            this.lbl_ohno.Name = "lbl_ohno";
+            this.lbl_ohno.Size = new System.Drawing.Size(122, 13);
+            this.lbl_ohno.TabIndex = 2;
+            this.lbl_ohno.Text = "Sajnos lelőttek. Szivacs.";
+            this.lbl_ohno.Visible = false;
             // 
-            // label2
+            // lbl_anyways
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(710, 89);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(203, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Szeretnéd, hogy más folytassa az utadat?";
+            this.lbl_anyways.AutoSize = true;
+            this.lbl_anyways.BackColor = System.Drawing.Color.Black;
+            this.lbl_anyways.ForeColor = System.Drawing.Color.White;
+            this.lbl_anyways.Location = new System.Drawing.Point(710, 89);
+            this.lbl_anyways.Name = "lbl_anyways";
+            this.lbl_anyways.Size = new System.Drawing.Size(203, 13);
+            this.lbl_anyways.TabIndex = 3;
+            this.lbl_anyways.Text = "Szeretnéd, hogy más folytassa az utadat?";
+            this.lbl_anyways.Visible = false;
             // 
             // SimoSim
             // 
@@ -96,8 +98,8 @@ namespace Elven_Population_Control
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(984, 611);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_anyways);
+            this.Controls.Add(this.lbl_ohno);
             this.Controls.Add(this.pctbx_direction);
             this.Controls.Add(this.pctbx_muzzle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -119,7 +121,7 @@ namespace Elven_Population_Control
         private System.Windows.Forms.Timer timer_life;
         private System.Windows.Forms.PictureBox pctbx_muzzle;
         private System.Windows.Forms.PictureBox pctbx_direction;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbl_ohno;
+        private System.Windows.Forms.Label lbl_anyways;
     }
 }

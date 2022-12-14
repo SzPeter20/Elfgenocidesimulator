@@ -99,40 +99,49 @@ namespace Elven_Population_Control
 
         private void timer_life_Tick(object sender, EventArgs e)
         {
-
-
-
-
             counter++;
-            if (nehezseg==3)
-            {
-                if (pctbx_direction.Image==null)
-                {
-                    if (dir.Next(0,100)>50)
-                    {
-                        pctbx_direction.Image = Properties.Resources.arrow_right;
-                        irany = "right";
-                    }
-                    else
-                    {
-                        pctbx_direction.Image = Properties.Resources.arrow_left;
-                        irany = "left";
-                    }
-                }
 
-                if (counter%5==0)
+
+            {
+                /*
+                if (nehezseg==3)
                 {
-                    hel = counter;
-                    pctbx_muzzle.Location = new Point(pctbx_muzzle.Location.X+muzzleloc.Next(0,130), pctbx_muzzle.Location.Y + muzzleloc.Next(0, 130));
-                    pctbx_muzzle.Visible = true;
+                    pctbx_muzzle.Location = new Point(pctbx_muzzle.Location.X + muzzleloc.Next(0, 130), pctbx_muzzle.Location.Y + muzzleloc.Next(0, 130));
+                    if (pctbx_direction.Image==null&&counter/5==0)
+                    {
+                        if (dir.Next(0,100)>50)
+                        {
+                            pctbx_direction.Image = Properties.Resources.arrow_right;
+                            pctbx_direction.Visible = true;
+                            irany = "right";
+                        }
+                        else
+                        {
+                            pctbx_direction.Image = Properties.Resources.arrow_left;
+                            pctbx_direction.Visible = true;
+                            irany = "left";
+                        }
+                    }
+
+                    if (counter/10==0)
+                    {
+                        hel = counter;
+
+                        pctbx_muzzle.Visible = true;
+                    }
+                    if (counter==hel+3)
+                    {
+                        irany = "";
+                        pctbx_muzzle.Visible = false;
+
+                    }
+
+
+
                 }
-                if (counter==hel+2)
-                {
-                    pctbx_muzzle.Visible = false;
-                   
-                }
+                else
+                */
             }
-            else
             {
                 if (counter==20)
                 {
@@ -185,12 +194,12 @@ namespace Elven_Population_Control
                 bool sikeres = true;
                 ugras(sikeres);
             }
-            else if (irany == "right" && !(e.KeyChar == Convert.ToChar(Keys.Right)))
+            else if ((irany == "right" && !(e.KeyChar == Convert.ToChar(Keys.Right)))||(irany==""))
             {
                 bool sikeres = false;
                 ugras(sikeres);
             }
-            else if (irany == "left" && !(e.KeyChar == Convert.ToChar(Keys.Left)))
+            else if ((irany == "left" && !(e.KeyChar == Convert.ToChar(Keys.Left))) || (irany == ""))
             {
                 bool sikeres = false;
                 ugras(sikeres);
@@ -203,9 +212,12 @@ namespace Elven_Population_Control
             {
                 pctbx_direction.Image = null;
                 irany = "";
+                counter = 0;
             }
             else
             {
+                lbl_anyways.Visible = true;
+                lbl_ohno.Visible = true;
                 this.BackgroundImage = null;
                 this.BackColor = Color.Black;
                 pctbx_muzzle.Visible = false;
