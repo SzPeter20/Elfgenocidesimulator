@@ -15,7 +15,7 @@ namespace Elven_Population_Control
         int playerSpeed = 12;
         int enemySpeed =15;
         int score = 0;
-        PictureBox[] elfek=new PictureBox[50];
+        PictureBox[] elfek=new PictureBox[55];
         public Jatekter()
         {
             InitializeComponent();
@@ -26,33 +26,21 @@ namespace Elven_Population_Control
         {
             foreach (Control x in this.Controls)
             {
+
                 if (x is PictureBox && (string)x.Tag == "sadInvaders")
                 {
                     x.Left += enemySpeed;
 
                     if (x.Left > 730)
                     {
-                        x.Top += 75;
+                        x.Top += 65;
                         x.Left = -80;
                     }
-                }
 
-                if (x is PictureBox && (string)x.Tag == "bullet")
-                {
-                    x.Top -= 20;
 
-                    if (x.Top < 15)
+                    if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
                     {
-                        this.Controls.Remove(x);
-                       
-                    }
-                
-
-
-                if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
-                    {
-                        MessageBox.Show("GAME OVER");
-                        
+                        gameOver("You've been invaded by the sad invaders, you are now sad!");
                     }
 
                     foreach (Control y in this.Controls)
@@ -64,18 +52,59 @@ namespace Elven_Population_Control
                                 this.Controls.Remove(x);
                                 this.Controls.Remove(y);
                                 score += 1;
+                                
 
                             }
                         }
                     }
-                    if (score > 8)
+                }
+
+                if (x is PictureBox && (string)x.Tag == "bullet")
+                {
+                    x.Top -= 20;
+
+                    if (x.Top < 15)
                     {
-                        enemySpeed = 12;
+                        this.Controls.Remove(x);
+                        ;
                     }
                 }
+
+                if (x is PictureBox && (string)x.Tag == "sadBullet")
+                {
+
+                    x.Top += 20;
+
+                    if (x.Top > 620)
+                    {
+                        this.Controls.Remove(x);
+                    }
+
+                    if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
+                    {
+                        this.Controls.Remove(x);
+                        gameOver("You've been killed by the sad bullet. Now you are sad forever!");
+                        
+                    }
+
+                }
+            }
+        
+
+            if (score > 8)
+            {
+                enemySpeed = 25;
+            }
+            pontok_lbl.Text = $"Pontok: {score}";
+            if (score == elfek.Length)
+            {
+                gameOver("Woohoo Happiness Found, Keep it safe!");
+                
             }
            
         }
+           
+        
         private void Jatekter_KeyPress(object sender, KeyPressEventArgs e)
         {
             
@@ -83,16 +112,13 @@ namespace Elven_Population_Control
 
         private void Jatekter_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode==Keys.Enter)
+            if (e.KeyCode==Keys.Space)
             {
                 timer1.Start();
                 pontok_lbl.Text = "Pontok: " + score;
                 
             }
-            if (e.KeyCode==Keys.Space) 
-            {
-                golo("bullet");
-            }
+            
             if (e.KeyCode == Keys.Left)
             {
                 tank_pictureBox.Location =new Point(tank_pictureBox.Location.X-10,tank_pictureBox.Location.Y);
@@ -106,7 +132,7 @@ namespace Elven_Population_Control
         private void golo(string bulletTag)
         {
             PictureBox bullet = new PictureBox();
-            bullet.Image = Properties.Resources.bullet_png_clipart_11;
+            bullet.Image = Properties.Resources.bullet;
             bullet.Size = new Size(5, 20);
             bullet.Tag = bulletTag;
             bullet.Left = tank_pictureBox.Left + tank_pictureBox.Width / 2;
@@ -151,6 +177,20 @@ namespace Elven_Population_Control
         private void Jatekter_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+        private void gameOver(string message)
+        {
+            
+            timer1.Stop();
+            pontok_lbl.Text = "Score:  " + score + " " + message;
+        }
+
+        private void Jatekter_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Space)
+            {
+                golo("bullet");
+            }
         }
     }
 }

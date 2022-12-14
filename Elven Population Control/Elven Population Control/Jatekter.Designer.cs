@@ -44,6 +44,7 @@ namespace Elven_Population_Control
             // 
             this.pontok_lbl.AutoSize = true;
             this.pontok_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.pontok_lbl.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.pontok_lbl.Location = new System.Drawing.Point(12, 383);
             this.pontok_lbl.Name = "pontok_lbl";
             this.pontok_lbl.Size = new System.Drawing.Size(47, 13);
@@ -74,6 +75,7 @@ namespace Elven_Population_Control
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jatekter_FormClosing);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Jatekter_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Jatekter_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Jatekter_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.tank_pictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
