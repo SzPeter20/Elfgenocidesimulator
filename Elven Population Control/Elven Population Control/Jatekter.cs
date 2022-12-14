@@ -15,7 +15,8 @@ namespace Elven_Population_Control
         int playerSpeed = 12;
         int enemySpeed =15;
         int score = 0;
-        PictureBox[] elfek=new PictureBox[55];
+        int enemyBulletTimer = 300;
+        PictureBox[] elfek=new PictureBox[10];
         public Jatekter()
         {
             InitializeComponent();
@@ -24,6 +25,13 @@ namespace Elven_Population_Control
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            enemyBulletTimer -= 10;
+
+            if (enemyBulletTimer < 1)
+            {
+                enemyBulletTimer = 300;
+                golo("sadBullet");
+            }
             foreach (Control x in this.Controls)
             {
 
@@ -94,7 +102,10 @@ namespace Elven_Population_Control
             if (score > 8)
             {
                 enemySpeed = 25;
+                playerSpeed = 30;
+                
             }
+            
             pontok_lbl.Text = $"Pontok: {score}";
             if (score == elfek.Length)
             {
@@ -121,11 +132,11 @@ namespace Elven_Population_Control
             
             if (e.KeyCode == Keys.Left)
             {
-                tank_pictureBox.Location =new Point(tank_pictureBox.Location.X-10,tank_pictureBox.Location.Y);
+                tank_pictureBox.Location =new Point(tank_pictureBox.Location.X-playerSpeed,tank_pictureBox.Location.Y);
             }
             if (e.KeyCode == Keys.Right)
             {
-                tank_pictureBox.Location = new Point(tank_pictureBox.Location.X + 10, tank_pictureBox.Location.Y);
+                tank_pictureBox.Location = new Point(tank_pictureBox.Location.X + playerSpeed, tank_pictureBox.Location.Y);
             }
         }
 
@@ -141,7 +152,11 @@ namespace Elven_Population_Control
             {
                 bullet.Top = tank_pictureBox.Top - 20;
             }
-            
+            else if ((string)bullet.Tag == "sadBullet")
+            {
+                bullet.Top = -100;
+            }
+
 
             this.Controls.Add(bullet);
             bullet.BringToFront();
@@ -182,7 +197,7 @@ namespace Elven_Population_Control
         {
             
             timer1.Stop();
-            pontok_lbl.Text = "Score:  " + score + " " + message;
+            pontok_lbl.Text = $" Pontok: {score} NYERTÉL!!!!!!!!!!!!!!!!!";
         }
 
         private void Jatekter_KeyUp(object sender, KeyEventArgs e)
@@ -190,6 +205,7 @@ namespace Elven_Population_Control
             if (e.KeyCode == Keys.Space)
             {
                 golo("bullet");
+                //golo("sadbullet");
             }
         }
     }
