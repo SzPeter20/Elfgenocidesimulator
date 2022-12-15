@@ -16,7 +16,7 @@ namespace Elven_Population_Control
         int enemySpeed =15;
         int score = 0;
         int enemyBulletTimer = 300;
-        PictureBox[] elfek=new PictureBox[10];
+        PictureBox[] elfek=new PictureBox[69];
         public Jatekter()
         {
             InitializeComponent();
@@ -109,7 +109,7 @@ namespace Elven_Population_Control
             pontok_lbl.Text = $"Pontok: {score}";
             if (score == elfek.Length)
             {
-                gameOver("Woohoo Happiness Found, Keep it safe!");
+                gameOver($"NYERTÉL!!!!!");
                 
             }
            
@@ -197,7 +197,7 @@ namespace Elven_Population_Control
         {
             
             timer1.Stop();
-            pontok_lbl.Text = $" Pontok: {score} NYERTÉL!!!!!!!!!!!!!!!!!";
+            pontok_lbl.Text = $" Pontok: {score} {message} ";
         }
 
         private void Jatekter_KeyUp(object sender, KeyEventArgs e)
