@@ -36,6 +36,7 @@ namespace Elven_Population_Control
             this.pctbx_direction = new System.Windows.Forms.PictureBox();
             this.lbl_ohno = new System.Windows.Forms.Label();
             this.lbl_anyways = new System.Windows.Forms.Label();
+            this.timer_flash = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pctbx_muzzle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctbx_direction)).BeginInit();
             this.SuspendLayout();
@@ -91,6 +92,11 @@ namespace Elven_Population_Control
             this.lbl_anyways.Text = "Szeretnéd, hogy más folytassa az utadat?";
             this.lbl_anyways.Visible = false;
             // 
+            // timer_flash
+            // 
+            this.timer_flash.Interval = 1000;
+            this.timer_flash.Tick += new System.EventHandler(this.timer_flash_Tick);
+            // 
             // SimoSim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,5 +129,6 @@ namespace Elven_Population_Control
         private System.Windows.Forms.PictureBox pctbx_direction;
         private System.Windows.Forms.Label lbl_ohno;
         private System.Windows.Forms.Label lbl_anyways;
+        private System.Windows.Forms.Timer timer_flash;
     }
 }

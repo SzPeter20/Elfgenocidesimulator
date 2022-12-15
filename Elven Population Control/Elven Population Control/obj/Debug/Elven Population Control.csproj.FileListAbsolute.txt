@@ -83,3 +83,5 @@ D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj
 D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
 D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb
 D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Suomenvoitto.resources
+D:\Git\elven\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.SimoSim.resources
+D:\Git\elven\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Suomenvoitto.resources

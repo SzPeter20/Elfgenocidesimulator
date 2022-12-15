@@ -20,6 +20,9 @@ namespace Elven_Population_Control
         static Random muzzleloc = new Random();
         static Random dir = new Random();
         static int hel = 0;
+        static int time = 0;
+        static int muzzleY;
+        static int muzzleX;
         static string[] muszka =new string[5] { "Sasha", "Vasily", "Dmitri", "Ivan", "Sergey" };
         static string irany = "";
         public SimoSim()
@@ -33,7 +36,10 @@ namespace Elven_Population_Control
                 this.BackgroundImage = Properties.Resources.forest;
             }
             nehezseg = diff;
+            muzzleX = pctbx_muzzle.Location.X;
+            muzzleY = pctbx_muzzle.Location.Y;
             timerset();
+
         }
 
         private void timerset()
@@ -46,7 +52,7 @@ namespace Elven_Population_Control
             {
                 Random velet = new Random();
                 timerend = velet.Next(80, 100);
-                timer_life.Start();
+                timer_flash.Start();
 
                 /*
                 Olemme tehneet isänmaan ylpeyden!
@@ -102,46 +108,7 @@ namespace Elven_Population_Control
             counter++;
 
 
-            {
-                /*
-                if (nehezseg==3)
-                {
-                    pctbx_muzzle.Location = new Point(pctbx_muzzle.Location.X + muzzleloc.Next(0, 130), pctbx_muzzle.Location.Y + muzzleloc.Next(0, 130));
-                    if (pctbx_direction.Image==null&&counter/5==0)
-                    {
-                        if (dir.Next(0,100)>50)
-                        {
-                            pctbx_direction.Image = Properties.Resources.arrow_right;
-                            pctbx_direction.Visible = true;
-                            irany = "right";
-                        }
-                        else
-                        {
-                            pctbx_direction.Image = Properties.Resources.arrow_left;
-                            pctbx_direction.Visible = true;
-                            irany = "left";
-                        }
-                    }
-
-                    if (counter/10==0)
-                    {
-                        hel = counter;
-
-                        pctbx_muzzle.Visible = true;
-                    }
-                    if (counter==hel+3)
-                    {
-                        irany = "";
-                        pctbx_muzzle.Visible = false;
-
-                    }
-
-
-
-                }
-                else
-                */
-            }
+            
             {
                 if (counter==20)
                 {
@@ -184,24 +151,36 @@ namespace Elven_Population_Control
 
         private void SimoSim_KeyPress(object sender, KeyPressEventArgs e)
         {
+            bool sikeres;
             if (irany=="right"&& e.KeyChar==Convert.ToChar( Keys.Right))
             {
-                bool sikeres = true;
+                pctbx_direction.Image = null;
+                pctbx_direction.Visible = false;
+                irany = "";
+                sikeres = true;
                 ugras(sikeres);
             }
-            else if (irany=="left" && e.KeyChar == Convert.ToChar(Keys.Left))
+            if (irany=="left" && e.KeyChar == Convert.ToChar(Keys.Left))
             {
-                bool sikeres = true;
+                pctbx_direction.Image = null;
+                pctbx_direction.Visible = false;
+                irany = "";
+                sikeres = true;
                 ugras(sikeres);
             }
-            else if ((irany == "right" && !(e.KeyChar == Convert.ToChar(Keys.Right)))||(irany==""))
+            if (irany == "left" && e.KeyChar == Convert.ToChar(Keys.Right))
             {
-                bool sikeres = false;
+                sikeres = false;
                 ugras(sikeres);
             }
-            else if ((irany == "left" && !(e.KeyChar == Convert.ToChar(Keys.Left))) || (irany == ""))
+            if (irany == "right" && e.KeyChar == Convert.ToChar(Keys.Left))
             {
-                bool sikeres = false;
+                sikeres = false;
+                ugras(sikeres);
+            }
+            if (!(e.KeyChar==Convert.ToChar(Keys.Left)&& !(e.KeyChar == Convert.ToChar(Keys.Right))))
+            {
+                sikeres = false;
                 ugras(sikeres);
             }
         }
@@ -211,17 +190,57 @@ namespace Elven_Population_Control
             if (sikeres)
             {
                 pctbx_direction.Image = null;
+                pctbx_direction.Visible = false;
                 irany = "";
-                counter = 0;
             }
             else
             {
+                pctbx_direction.Visible = false;
+                /*
                 lbl_anyways.Visible = true;
                 lbl_ohno.Visible = true;
                 this.BackgroundImage = null;
                 this.BackColor = Color.Black;
                 pctbx_muzzle.Visible = false;
                 pctbx_direction.Visible = false;
+                */
+            }
+        }
+
+        private void timer_flash_Tick(object sender, EventArgs e)
+        {
+            {
+                time++;
+                if (time==2&&irany=="")
+                {
+                    if (50<dir.Next(0,100))
+                    {
+                        irany = "right";
+                        pctbx_direction.Image = Properties.Resources.arrow_right;
+                        pctbx_direction.Visible = true;
+                    }
+                    else
+                    {
+                        irany = "left";
+                        pctbx_direction.Image = Properties.Resources.arrow_left;
+                        pctbx_direction.Visible = true;
+                    }
+                    time = 0;
+                }
+                if (time==5)
+                {
+
+                    pctbx_muzzle.Location = new Point(muzzleX + muzzleloc.Next(0, 160), muzzleY + muzzleloc.Next(0, 160));
+                    pctbx_muzzle.Visible = true;
+                }
+                if (time==6)
+                {
+                    pctbx_muzzle.Visible = false;
+                    time = 0;
+                }
+
+                
+                
             }
         }
     }
