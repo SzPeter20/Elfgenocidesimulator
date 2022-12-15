@@ -48,7 +48,7 @@ namespace Elven_Population_Control
 
                     if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
                     {
-                        gameOver("You've been invaded by the sad invaders, you are now sad!");
+                        gameOver("You've been invaded by the invaders, you are now sad!");
                     }
 
                     foreach (Control y in this.Controls)
@@ -91,7 +91,7 @@ namespace Elven_Population_Control
                     if (x.Bounds.IntersectsWith(tank_pictureBox.Bounds))
                     {
                         this.Controls.Remove(x);
-                        gameOver("You've been killed by the sad bullet. Now you are sad forever!");
+                        gameOver("You've been killed by the bullet. Now you are sad forever!");
                         
                     }
 
@@ -99,7 +99,7 @@ namespace Elven_Population_Control
             }
         
 
-            if (score > 8)
+            if (score > 15)
             {
                 enemySpeed = 25;
                 playerSpeed = 30;
@@ -109,7 +109,7 @@ namespace Elven_Population_Control
             pontok_lbl.Text = $"Pontok: {score}";
             if (score == elfek.Length)
             {
-                gameOver($"NYERTÉL!!!!!");
+                gameOver("NYERTÉL!!!!!");
                 
             }
            
@@ -197,7 +197,12 @@ namespace Elven_Population_Control
         {
             
             timer1.Stop();
-            pontok_lbl.Text = $" Pontok: {score} {message} ";
+            MessageBox.Show(message + "Pontok: " + score);
+            
+            pontok_lbl.Text = $" Pontok: {score}";
+
+            Application.Restart();
+            
         }
 
         private void Jatekter_KeyUp(object sender, KeyEventArgs e)
