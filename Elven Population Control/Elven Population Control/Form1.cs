@@ -22,7 +22,7 @@ namespace Elven_Population_Control
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             Szint uj = new Szint();
-            this.Hide();
+            this.Dispose(false);
             uj.Show();
         }
 

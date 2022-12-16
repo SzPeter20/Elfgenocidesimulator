@@ -19,10 +19,10 @@ namespace Elven_Population_Control
         static int namec = 0;
         static Random muzzleloc = new Random();
         static Random dir = new Random();
-        static int hel = 0;
         static int time = 0;
         static int muzzleY;
         static int muzzleX;
+        static bool jumped = false;
         static string[] muszka =new string[5] { "Sasha", "Vasily", "Dmitri", "Ivan", "Sergey" };
         static string irany = "";
         public SimoSim()
@@ -151,38 +151,49 @@ namespace Elven_Population_Control
 
         private void SimoSim_KeyPress(object sender, KeyPressEventArgs e)
         {
+            
+            
             bool sikeres;
-            if (irany=="right"&& e.KeyChar==Convert.ToChar( Keys.Right))
+            if (pctbx_muzzle.Visible == true)
             {
-                pctbx_direction.Image = null;
-                pctbx_direction.Visible = false;
-                irany = "";
-                sikeres = true;
-                ugras(sikeres);
+                if (irany == "right" && (e.KeyChar).ToString().ToLower() == (Convert.ToChar(Keys.D)).ToString().ToLower())
+                {
+                    jumped = true;
+                    pctbx_direction.Image = null;
+                    pctbx_direction.Visible = false;
+
+                    sikeres = true;
+                    ugras(sikeres);
+                }
+                else if (irany == "left" && e.KeyChar.ToString().ToLower() == (Convert.ToChar(Keys.A)).ToString().ToLower())
+                {
+                    jumped = true;
+                    pctbx_direction.Image = null;
+                    pctbx_direction.Visible = false;
+
+                    sikeres = true;
+                    ugras(sikeres);
+                }
+                else if (irany == "left" && e.KeyChar.ToString().ToLower() == Convert.ToChar(Keys.D).ToString().ToLower())
+                {
+                    sikeres = false;
+                    ugras(sikeres);
+                }
+                else if (irany == "right" && e.KeyChar.ToString().ToLower() == Convert.ToChar(Keys.A).ToString().ToLower())
+                {
+                    sikeres = false;
+                    ugras(sikeres);
+                }
+
             }
-            if (irany=="left" && e.KeyChar == Convert.ToChar(Keys.Left))
-            {
-                pctbx_direction.Image = null;
-                pctbx_direction.Visible = false;
-                irany = "";
-                sikeres = true;
-                ugras(sikeres);
-            }
-            if (irany == "left" && e.KeyChar == Convert.ToChar(Keys.Right))
+            
+            if (!(e.KeyChar.ToString().ToLower() == Convert.ToChar(Keys.A).ToString().ToLower() && !(e.KeyChar.ToString().ToLower() == Convert.ToChar(Keys.D).ToString().ToLower())))
             {
                 sikeres = false;
                 ugras(sikeres);
             }
-            if (irany == "right" && e.KeyChar == Convert.ToChar(Keys.Left))
-            {
-                sikeres = false;
-                ugras(sikeres);
-            }
-            if (!(e.KeyChar==Convert.ToChar(Keys.Left)&& !(e.KeyChar == Convert.ToChar(Keys.Right))))
-            {
-                sikeres = false;
-                ugras(sikeres);
-            }
+
+
         }
 
         private void ugras(bool sikeres)
@@ -195,15 +206,19 @@ namespace Elven_Population_Control
             }
             else
             {
-                pctbx_direction.Visible = false;
-                /*
+
+
+                timer_flash.Stop();
                 lbl_anyways.Visible = true;
                 lbl_ohno.Visible = true;
-                this.BackgroundImage = null;
+                this.BackgroundImage = Properties.Resources.rip;
+                this.BackgroundImageLayout = ImageLayout.Zoom;
                 this.BackColor = Color.Black;
                 pctbx_muzzle.Visible = false;
                 pctbx_direction.Visible = false;
-                */
+                btn_stop.Visible = true;
+                btn_continue.Visible = true;
+                lbl_doyouwant.Visible = true;
             }
         }
 
@@ -216,12 +231,14 @@ namespace Elven_Population_Control
                     if (50<dir.Next(0,100))
                     {
                         irany = "right";
+                        pctbx_letter.Image = Properties.Resources.D;
                         pctbx_direction.Image = Properties.Resources.arrow_right;
                         pctbx_direction.Visible = true;
                     }
                     else
                     {
                         irany = "left";
+                        pctbx_letter.Image = Properties.Resources.A;
                         pctbx_direction.Image = Properties.Resources.arrow_left;
                         pctbx_direction.Visible = true;
                     }
@@ -229,7 +246,7 @@ namespace Elven_Population_Control
                 }
                 if (time==5)
                 {
-
+                    jumped = false;
                     pctbx_muzzle.Location = new Point(muzzleX + muzzleloc.Next(0, 160), muzzleY + muzzleloc.Next(0, 160));
                     pctbx_muzzle.Visible = true;
                 }
@@ -237,11 +254,44 @@ namespace Elven_Population_Control
                 {
                     pctbx_muzzle.Visible = false;
                     time = 0;
+                    if (!jumped)
+                    {
+                        ugras(false);
+                    }
+                    
                 }
 
                 
                 
             }
+        }
+
+        private void btn_stop_Click(object sender, EventArgs e)
+        {
+            btn_stop.Visible = false;
+            btn_continue.Visible = false;
+            btn_other.Visible = true;
+            btn_rest.Visible = true;
+        }
+
+        private void btn_continue_Click(object sender, EventArgs e)
+        {
+            SimoSim uj = new SimoSim();
+            uj.nehez(3);
+            uj.Show();
+            this.Hide();
+        }
+
+        private void btn_other_Click(object sender, EventArgs e)
+        {
+            Szint uj = new Szint();
+            uj.Show();
+            this.Dispose(false);
+        }
+
+        private void btn_rest_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
