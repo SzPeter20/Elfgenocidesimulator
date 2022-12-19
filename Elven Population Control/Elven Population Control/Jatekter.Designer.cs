@@ -68,8 +68,10 @@ namespace Elven_Population_Control
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(800, 415);
-            this.Controls.Add(this.tank_pictureBox);
             this.Controls.Add(this.pontok_lbl);
+            this.Controls.Add(this.tank_pictureBox);
+            this.MaximumSize = new System.Drawing.Size(816, 454);
+            this.MinimumSize = new System.Drawing.Size(816, 454);
             this.Name = "Jatekter";
             this.Text = "Jatekter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Jatekter_FormClosing);

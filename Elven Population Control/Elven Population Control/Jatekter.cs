@@ -17,6 +17,7 @@ namespace Elven_Population_Control
         int score = 0;
         int enemyBulletTimer = 300;
         PictureBox[] elfek=new PictureBox[69];
+        bool mozoghat = false;
         public Jatekter()
         {
             InitializeComponent();
@@ -26,12 +27,12 @@ namespace Elven_Population_Control
         private void timer1_Tick(object sender, EventArgs e)
         {
             enemyBulletTimer -= 10;
-
+            
             if (enemyBulletTimer < 1)
             {
                 enemyBulletTimer = 300;
                 golo("sadBullet");
-            }
+            } 
             foreach (Control x in this.Controls)
             {
 
@@ -127,14 +128,14 @@ namespace Elven_Population_Control
             {
                 timer1.Start();
                 pontok_lbl.Text = "Pontok: " + score;
-                
+                mozoghat = true;
             }
             
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.Left && mozoghat == true)
             {
                 tank_pictureBox.Location =new Point(tank_pictureBox.Location.X-playerSpeed,tank_pictureBox.Location.Y);
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.Right && mozoghat == true)
             {
                 tank_pictureBox.Location = new Point(tank_pictureBox.Location.X + playerSpeed, tank_pictureBox.Location.Y);
             }
@@ -168,7 +169,7 @@ namespace Elven_Population_Control
         {
 
            
-            int left = 0;
+            int left =730 ;
             for (int i = 0; i < elfek.Length; i++)
             {
 
@@ -176,7 +177,7 @@ namespace Elven_Population_Control
                 elfek[i].Size = new Size(60, 50);
                 elfek[i].Image = Properties.Resources.MicrosoftTeams_image__1__removebg_preview;
                 elfek[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                elfek[i].Top = 5; 
+                elfek[i].Top = 15; 
                 elfek[i].Left = left;
                 elfek[i].Tag = "sadInvaders";
                 this.Controls.Add(elfek[i]);
@@ -201,7 +202,7 @@ namespace Elven_Population_Control
             
             pontok_lbl.Text = $" Pontok: {score}";
 
-            Application.Restart();
+            Application.Restart(); 
             
         }
 
