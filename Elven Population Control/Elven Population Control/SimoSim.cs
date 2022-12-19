@@ -129,7 +129,10 @@ namespace Elven_Population_Control
                 if (enemies.Count==0)
                 {
                     timer_life.Stop();
-                    Suomenvoitto uj = new Suomenvoitto();
+                    elfinvictory();
+                    
+
+
                     
                 }
                 else
@@ -142,6 +145,13 @@ namespace Elven_Population_Control
                 
             }
             
+        }
+
+        private void elfinvictory()
+        {
+            Suomenvoitto uj = new Suomenvoitto();
+            uj.Show();
+            this.Dispose(false);
         }
 
         private void SimoSim_FormClosing(object sender, FormClosingEventArgs e)
@@ -161,6 +171,7 @@ namespace Elven_Population_Control
                     jumped = true;
                     pctbx_direction.Image = null;
                     pctbx_direction.Visible = false;
+                    
 
                     sikeres = true;
                     ugras(sikeres);
@@ -170,6 +181,7 @@ namespace Elven_Population_Control
                     jumped = true;
                     pctbx_direction.Image = null;
                     pctbx_direction.Visible = false;
+                    
 
                     sikeres = true;
                     ugras(sikeres);
@@ -218,7 +230,7 @@ namespace Elven_Population_Control
                 pctbx_direction.Visible = false;
                 btn_stop.Visible = true;
                 btn_continue.Visible = true;
-                lbl_doyouwant.Visible = true;
+                
             }
         }
 
@@ -272,6 +284,7 @@ namespace Elven_Population_Control
             btn_continue.Visible = false;
             btn_other.Visible = true;
             btn_rest.Visible = true;
+            lbl_doyouwant.Visible = true;
         }
 
         private void btn_continue_Click(object sender, EventArgs e)
@@ -279,7 +292,7 @@ namespace Elven_Population_Control
             SimoSim uj = new SimoSim();
             uj.nehez(3);
             uj.Show();
-            this.Hide();
+            this.Dispose(false);
         }
 
         private void btn_other_Click(object sender, EventArgs e)

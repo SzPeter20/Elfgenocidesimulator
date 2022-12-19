@@ -46,7 +46,7 @@ namespace Elven_Population_Control
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(2, 65);
+            this.label1.Location = new System.Drawing.Point(410, 29);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(367, 25);
             this.label1.TabIndex = 0;
@@ -56,7 +56,7 @@ namespace Elven_Population_Control
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(616, 122);
+            this.label2.Location = new System.Drawing.Point(514, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(140, 13);
             this.label2.TabIndex = 1;
@@ -66,7 +66,7 @@ namespace Elven_Population_Control
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(616, 158);
+            this.label3.Location = new System.Drawing.Point(514, 146);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(135, 13);
             this.label3.TabIndex = 2;
@@ -74,7 +74,7 @@ namespace Elven_Population_Control
             // 
             // btn_joo
             // 
-            this.btn_joo.Location = new System.Drawing.Point(636, 207);
+            this.btn_joo.Location = new System.Drawing.Point(534, 195);
             this.btn_joo.Name = "btn_joo";
             this.btn_joo.Size = new System.Drawing.Size(95, 44);
             this.btn_joo.TabIndex = 4;
@@ -84,7 +84,7 @@ namespace Elven_Population_Control
             // 
             // btn_ei
             // 
-            this.btn_ei.Location = new System.Drawing.Point(636, 270);
+            this.btn_ei.Location = new System.Drawing.Point(534, 258);
             this.btn_ei.Name = "btn_ei";
             this.btn_ei.Size = new System.Drawing.Size(95, 44);
             this.btn_ei.TabIndex = 5;
@@ -97,7 +97,7 @@ namespace Elven_Population_Control
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(102, 106);
+            this.label4.Location = new System.Drawing.Point(510, 70);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(137, 24);
             this.label4.TabIndex = 6;
@@ -105,7 +105,7 @@ namespace Elven_Population_Control
             // 
             // btn_beache
             // 
-            this.btn_beache.Location = new System.Drawing.Point(568, 391);
+            this.btn_beache.Location = new System.Drawing.Point(466, 379);
             this.btn_beache.Name = "btn_beache";
             this.btn_beache.Size = new System.Drawing.Size(95, 44);
             this.btn_beache.TabIndex = 7;
@@ -116,7 +116,7 @@ namespace Elven_Population_Control
             // 
             // btn_historical
             // 
-            this.btn_historical.Location = new System.Drawing.Point(693, 391);
+            this.btn_historical.Location = new System.Drawing.Point(591, 379);
             this.btn_historical.Name = "btn_historical";
             this.btn_historical.Size = new System.Drawing.Size(95, 44);
             this.btn_historical.TabIndex = 8;
@@ -129,7 +129,7 @@ namespace Elven_Population_Control
             // 
             this.lbl_othergame.AutoSize = true;
             this.lbl_othergame.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_othergame.Location = new System.Drawing.Point(589, 356);
+            this.lbl_othergame.Location = new System.Drawing.Point(487, 344);
             this.lbl_othergame.Name = "lbl_othergame";
             this.lbl_othergame.Size = new System.Drawing.Size(167, 13);
             this.lbl_othergame.TabIndex = 9;
@@ -158,6 +158,7 @@ namespace Elven_Population_Control
             this.MinimumSize = new System.Drawing.Size(816, 532);
             this.Name = "Suomenvoitto";
             this.Text = "Elfin Voitto";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Suomenvoitto_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

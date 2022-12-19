@@ -21,19 +21,16 @@ namespace Elven_Population_Control
 
         private void btn_start_Click(object sender, EventArgs e)
         {
-            if (diff==2)
-            {
-                Jatekter uj = new Jatekter();
-                uj.nehez(diff);
-                this.Hide();
-                uj.Show();
-            }
-            else
+            if (diff!=2)
             {
                 SimoSim uj = new SimoSim();
                 uj.nehez(diff);
                 this.Hide();
                 uj.Show();
+            }
+            else if (diff==2)
+            {
+
             }
             
         }

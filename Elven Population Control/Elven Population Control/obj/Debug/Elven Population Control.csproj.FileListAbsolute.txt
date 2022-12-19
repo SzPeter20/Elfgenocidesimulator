@@ -85,3 +85,17 @@ D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj
 D:\git\christmas\Új mappa\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Suomenvoitto.resources
 D:\Git\elven\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.SimoSim.resources
 D:\Git\elven\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Suomenvoitto.resources
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe.config
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.exe
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\bin\Debug\Elven Population Control.pdb
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.AssemblyReference.cache
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Form1.resources
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Jatekter.resources
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Properties.Resources.resources
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.SimoSim.resources
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Suomenvoitto.resources
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven_Population_Control.Szint.resources
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.GenerateResource.cache
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.csproj.CoreCompileInputs.cache
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.exe
+D:\Git\elf\Elfgenocidesimulator\Elven Population Control\Elven Population Control\obj\Debug\Elven Population Control.pdb

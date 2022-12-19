@@ -19,13 +19,18 @@ namespace Elven_Population_Control
 
         private void btn_ei_Click(object sender, EventArgs e)
         {
-
+            btn_ei.Visible = false;
+            btn_joo.Visible = false;
+            lbl_othergame.Visible = true;
+            btn_historical.Visible = true;
+            btn_beache.Visible = true;
         }
 
         private void btn_joo_Click(object sender, EventArgs e)
         {
             SimoSim uj = new SimoSim();
             uj.nehez(1);
+            uj.Show();
             this.Dispose(false) ;
         }
 
@@ -37,6 +42,11 @@ namespace Elven_Population_Control
         }
 
         private void btn_historical_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Suomenvoitto_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
