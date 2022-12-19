@@ -23,5 +23,10 @@ namespace Elven_Population_Control
             this.Hide();
             uj.Show();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
