@@ -12,7 +12,7 @@ namespace Elven_Population_Control
 {
     public partial class Szint : Form
     {
-        static int diff = 0;
+        static int diff = 2;
         public Szint()
         {
             InitializeComponent();
@@ -30,7 +30,9 @@ namespace Elven_Population_Control
             }
             else if (diff==2)
             {
-
+                Jatekter uj = new Jatekter();
+                uj.Show();
+                this.Dispose();
             }
             
         }

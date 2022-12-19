@@ -173,5 +173,8 @@
   <ItemGroup>
     <None Include="bin\Debug\imgs\imperialist-removebg-preview.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\imgs\bullet.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
